@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)fcsnyna#%3mcs=^skjozk7_jc#88l8r0jq003iyf7prjdo6tu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
 
 
 # Application definition
@@ -45,11 +46,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-
+    'crispy_forms',
+    'crispy_forms',
+    'crispy_bootstrap5',
 
 
 
 ]
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -126,9 +130,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-
+# Statik fayllar sozlamalari
+STATIC_URL = '/static/'
+STATIC_ROOT = r'C:\Users\Noutbuk_savdosi\Desktop\TAYYOR PROEKTLAR\wholesale_crm\wholesale_crm\static'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATICFILES_DIRS = [
+    r'C:\Users\Noutbuk_savdosi\Desktop\TAYYOR PROEKTLAR\wholesale_crm\wholesale_crm\my_static_files',  # Agar boshqa statik papkalar bo‘lsa
+]
