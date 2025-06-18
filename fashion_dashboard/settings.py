@@ -6,8 +6,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fashion-dashboard-secret-key-example'
 DEBUG = True
 
-# Replit uchun ALLOWED_HOSTS
-ALLOWED_HOSTS = ["*"]  # yoki domeningizni yozing
+# === Replit domenini ALLOWED_HOSTS va CSRF_TRUSTED_ORIGINS ga qo‘shamiz ===
+ALLOWED_HOSTS = [
+    ".replit.dev",
+    "localhost",
+    "127.0.0.1"
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.replit.dev"
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -79,10 +87,10 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
+# Static files (CSS, JS, Images)
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = BASE_DIR / "staticfiles"  # <-- YANGI QATOR
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Media files
 MEDIA_URL = '/media/'
@@ -94,6 +102,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
-# Login URLs
+# Login redirect
 LOGIN_REDIRECT_URL = 'dashboard-home'
 LOGIN_URL = 'login'
