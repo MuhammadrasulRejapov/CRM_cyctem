@@ -3,7 +3,10 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-)fcsnyna#%3mcs=^skjozk7_jc#88l8r0jq003iyf7prjdo6tu'
-DEBUG = True
+
+DEBUG = False
+
+# DEBUG = True
 
 # Replit yoki boshqa bulut uchun
 ALLOWED_HOSTS = ["*"]  # yoki domeningizni yozing

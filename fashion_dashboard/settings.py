@@ -4,7 +4,11 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-fashion-dashboard-secret-key-example'
-DEBUG = True
+
+DEBUG = False
+
+# DEBUG = True
+
 
 # === Replit domenini ALLOWED_HOSTS va CSRF_TRUSTED_ORIGINS ga qo‘shamiz ===
 ALLOWED_HOSTS = [
